@@ -1,0 +1,6 @@
+<h1>Menu</h1>
+<div class="btn-group btn-group-sm" role="group" aria-label="...">
+	<% @sections.each do |section| %>
+		<%= link_to section.name, menu_path(section: section.id), class: "btn btn-default #{active_class(menu_path(section: section.id))}" %>
+	<% end %>
+</div>
