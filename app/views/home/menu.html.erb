@@ -1,14 +1,29 @@
 <h1>Menu</h1>
 <div class="btn-group btn-group-sm" role="group" aria-label="...">
+	<%= link_to 'ALL', menu_path, class: "btn btn-default #{'btn-primary' if params[:section_id].nil?}" %>
 	<% @sections.each do |section| %>
 		<%= link_to section.name, menu_path(section_id: section.id), class: "btn btn-default #{active_class(menu_path(section_id: section.id))}" %>
 	<% end %>
 </div>
-
-<% @current_section.food_items.each do |item| %>
-	name: <%= item.name %>
-	description: <%= item.description %>
-	price: <%= number_to_currency(item.price) %>
-	description: <%= item.price %>
-	section: <%= Section.find(item.section_id).name %>
+<br>
+<% if @food_items.size == 0 %>
+     <p class="text-center"> No item to display</p>
+    <% else %>
+    	<% if params[:section_id].present? %>
+    		<% @current_section.food_items.each do |item| %>
+				name: <%= item.name %>
+				description: <%= item.description %>
+				price: <%= number_to_currency(item.price) %>
+				description: <%= item.price %>
+				section: <%= Section.find(item.section_id).name %>
+			<% end %>
+    	<% else %>
+			<% @food_items.each do |item| %>
+				name: <%= item.name %><br>
+				description: <%= item.description %><br>
+				price: <%= number_to_currency(item.price) %><br>
+				description: <%= item.price %><br>
+				section: <%= Section.find(item.section_id).name %>
+			<% end %>
+    	<% end %>
 <% end %>
