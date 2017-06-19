@@ -6,11 +6,11 @@
 	<% end %>
 </div>
 <p>
-<%= form_tag nil, method: 'get' do %>
+<%= form_tag nil, method: 'get', class: "form-inline" do %>
 	<%= hidden_field_tag :section_id, params[:section_id] %>
-	<%= select_tag :sort_column, options_for_select(['name','price']) %>
-	<%= select_tag :sort_direction, options_for_select(['asc', 'desc']) %>
-	<%= submit_tag "Sort" %>
+	<%= select_tag :sort_column, options_for_select(['name','price']), class: "form-control" %>
+	<%= select_tag :sort_direction, options_for_select(['asc', 'desc']), class: "form-control" %>
+	<%= submit_tag "Sort", class: "btn btn-default" %>
 <% end %>
 </p>
 <% if @food_items.size == 0 %>
@@ -20,7 +20,6 @@
 			<p><strong>name:</strong> <%= item.name %></p>
 			<p><strong>description:</strong> <%= item.description %></p>
 			<p><strong>price:</strong> <%= number_to_currency(item.price) %></p>
-			<p><strong>description:</strong> <%= item.price %></p>
 			<p><strong>section:</strong> <%= Section.find(item.section_id).name %></p>
 			<p><strong>Image:</strong> <%= image_tag(item.image_url.to_s, width: "450") %></p>
 			<hr>
