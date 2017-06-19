@@ -34,7 +34,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 # gem CarrierWave
 gem 'carrierwave', '~> 1.0'
-gem 'mini_magick' # For different versions of an image
+#gem 'mini_magick' # For different versions of an image
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
