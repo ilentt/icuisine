@@ -8,8 +8,8 @@
 <p>
 <%= form_tag nil, method: 'get', class: "form-inline" do %>
 	<%= hidden_field_tag :section_id, params[:section_id] %>
-	<%= select_tag :sort_column, options_for_select(['name','price']), class: "form-control" %>
-	<%= select_tag :sort_direction, options_for_select(['asc', 'desc']), class: "form-control" %>
+	<%= select_tag :sort_column, options_for_select([ ['Name', 'name'], ['Price', 'price'] ]), class: "form-control" %>
+	<%= select_tag :sort_direction, options_for_select([ ['Ascending', 'asc'], ['Descending', 'desc'] ]), class: "form-control" %>
 	<%= submit_tag "Sort", class: "btn btn-default" %>
 <% end %>
 </p>
