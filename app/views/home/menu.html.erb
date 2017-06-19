@@ -11,19 +11,23 @@
     <% else %>
     	<% if params[:section_id].present? %>
     		<% @current_section.food_items.each do |item| %>
-				name: <%= item.name %>
-				description: <%= item.description %>
-				price: <%= number_to_currency(item.price) %>
-				description: <%= item.price %>
-				section: <%= Section.find(item.section_id).name %>
+				<p><strong>name:</strong> <%= item.name %></p>
+				<p><strong>description:</strong> <%= item.description %></p>
+				<p><strong>price:</strong> <%= number_to_currency(item.price) %></p>
+				<p><strong>description:</strong> <%= item.price %></p>
+				<p><strong>section:</strong> <%= Section.find(item.section_id).name %></p>
+				<p><strong>Image:</strong> <%= image_tag(item.image_url.to_s, width: "450") %></p>
+				<hr>
 			<% end %>
     	<% else %>
 			<% @food_items.each do |item| %>
-				name: <%= item.name %><br>
-				description: <%= item.description %><br>
-				price: <%= number_to_currency(item.price) %><br>
-				description: <%= item.price %><br>
-				section: <%= Section.find(item.section_id).name %>
+				<p><strong>name:</strong> <%= item.name %></p>
+				<p><strong>description:</strong> <%= item.description %></p>
+				<p><strong>price:</strong> <%= number_to_currency(item.price) %></p>
+				<p><strong>description:</strong> <%= item.price %></p>
+				<p><strong>section:</strong> <%= Section.find(item.section_id).name %></p>
+				<p><strong>Image:</strong> <%= image_tag(item.image_url.to_s, width: "450") %></p>
+				<hr>
 			<% end %>
     	<% end %>
 <% end %>
