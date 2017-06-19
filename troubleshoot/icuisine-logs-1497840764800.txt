@@ -1,0 +1,11 @@
+2017-06-19T02:44:49.153187+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-06-19T02:44:49.153188+00:00 app[web.1]: Exiting
+2017-06-19T02:44:49.268764+00:00 heroku[web.1]: State changed from starting to crashed
+2017-06-19T02:44:59.476937+00:00 app[api]: Starting process with command `bundle exec rake db:migrate` by user ilentt@ilenlab.com
+2017-06-19T02:45:02.940301+00:00 heroku[run.5320]: Awaiting client
+2017-06-19T02:45:02.970709+00:00 heroku[run.5320]: Starting process with command `bundle exec rake db:migrate`
+2017-06-19T02:45:03.022584+00:00 heroku[run.5320]: State changed from starting to up
+2017-06-19T02:45:09.495651+00:00 heroku[run.5320]: Process exited with status 0
+2017-06-19T02:45:09.509445+00:00 heroku[run.5320]: State changed from up to complete
+2017-06-19T02:45:24.060290+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=icuisine.herokuapp.com request_id=77c64215-c802-406a-b402-152b325b3602 fwd="203.205.28.83" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-19T02:45:25.804277+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=icuisine.herokuapp.com request_id=965cf3c6-28e5-4f22-8868-9d8df1aca782 fwd="203.205.28.83" dyno= connect= service= status=503 bytes= protocol=https

@@ -4,9 +4,9 @@
 
 Submitted by: **I Len**
 
-Time spent: **XX** hours spent in total
+Time spent: **6.5** hours spent in total
 
-URL: **heroku-app-url**
+URL: **[I Len's Cuisine](https://icuisine.herokuapp.com/)**
 
 ## User Stories
 
@@ -52,7 +52,7 @@ The following **additional** features are implemented:
 
 The following **known issues**:
 
-* List bugs or things that don't work yet
+* Deploy failed, please view detail in `troubleshoot` folder
 
 ## Video Walkthrough
 
