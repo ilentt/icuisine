@@ -27,7 +27,7 @@
 
 <p>
   <strong>Order:</strong>
-  <%= link_to 'Add to order', new_order_path(food_item_id: @food_item.id) %>
+  <%= link_to 'Add to order', new_food_item_order_path(@food_item) %>
 </p>
 
 <%= link_to 'Edit', edit_food_item_path(@food_item) %> |

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :orders
-  resources :food_items
-  resources :orders
+  resources :food_items do
+  	resources :orders
+  end
   
   get 'home/index'
 
